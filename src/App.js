@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+
+import MainLayout from "./components/MainLayout/MainLayout";
+import Header from "./components/Header/Header";
+import MenuBar from "./components/ExploreMenu/ExploreMenu";
+import FoodDisplay from "./components/FoodDisplay/FoodDisplay";
+import AppDownload from "./components/AppDownload/AppDownload";
+import Cart from "./components/Cart/Cart";
+import LoginPopup from "./components/LoginPopup/LoginPopup";
 
 function App() {
+  const [showLogin, setShowLogin] = useState(false);
+  const [category, setCategory] = useState("All");
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
+
+      <Routes>
+        <Route element={<MainLayout setShowLogin={setShowLogin} />}>
+
+          {/* HOME PAGE */}
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <MenuBar category={category} setCategory={setCategory} />
+                <FoodDisplay category={category} />
+                <AppDownload />
+              </>
+            }
+          />
+          <Route path="/mobile-app" element={<AppDownload />} />
+          {/* CART PAGE */}
+          <Route path="/cart" element={<Cart />} />
+
+        </Route>
+      </Routes>
+    </>
   );
 }
 
