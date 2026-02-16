@@ -1,6 +1,6 @@
 import Container from "react-bootstrap/Container";
 import { Card } from "react-bootstrap";
-import { menu_list } from "../../Assests/assets/frontend_assets/assets";
+import { menu_list } from "../../assets/assets/frontend_assets/assets";
 import './ExploreMenu.css'
 
 function MenuBar({ category, setCategory }) {

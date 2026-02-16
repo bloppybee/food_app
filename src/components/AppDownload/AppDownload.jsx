@@ -1,4 +1,4 @@
-import {assets} from '../../Assests/assets/frontend_assets/assets'
+import {assets} from '../../assets/assets/frontend_assets/assets'
 import { Container } from "react-bootstrap";
 
 function AppDownload() {

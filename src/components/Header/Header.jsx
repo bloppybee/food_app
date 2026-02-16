@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
-import {assets} from '../../Assests/assets/frontend_assets/assets'
+import {assets} from '../../assets/assets/frontend_assets/assets'
 import './Header.css';
 
 
@@ -56,7 +56,7 @@ export default Hero;
 
 
 // import Image from 'react-bootstrap/Image';
-// import {assets} from '../../Assests/assets/frontend_assets/assets';
+// import {assets} from '../../assets/assets/frontend_assets/assets';
 
 
 // function FluidExample() {

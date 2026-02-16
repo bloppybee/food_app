@@ -1,6 +1,6 @@
 import { StoreContext } from "../contexts/StoreContext";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { food_list } from "../../Assests/assets/frontend_assets/assets";
+import { food_list } from "../../assets/assets/frontend_assets/assets";
 import Button from "react-bootstrap/Button";
 import { useContext } from "react";
 

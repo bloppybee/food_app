@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
-import { assets } from "../../Assests/assets/frontend_assets/assets";
+import { assets } from "../../assets/assets/frontend_assets/assets";
 
 function LoginPopup({ setShowLogin }) {
   const [currState, setCurrState] = useState("Sign Up");
